@@ -2,14 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Dashboard</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="container" style="flex-direction: column; text-align:center;">
+  <div class="container" style="flex-direction: column; text-align:center; gap:20px; padding:20px;">
     <h1>Bienvenue {{ user }} 🎉</h1>
-    <p>Ceci est votre espace personnel.</p>
-    <a href="/logout" class="logout-button">Se déconnecter</a>
+    <p>Ceci est votre espace personnel sécurisé.</p>
+    <a href="{{ url_for('logout') }}" class="logout-button">Se déconnecter</a>
   </div>
 </body>
 </html>
