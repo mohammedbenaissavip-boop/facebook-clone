@@ -230,33 +230,36 @@ body {
     }
 }
 /* --- MOBILE FOOTER FIX (better) --- */
+/* --- MOBILE FOOTER FIX (final) --- */
 @media (max-width: 600px) {
     .footer {
-        position: relative;   /* let it scroll normally */
+        position: relative;   /* footer scrolls normally */
         padding: 6px;
         font-size: 10px;
-        line-height: 1.2;
-        max-height: 120px;   /* limit height */
-        overflow-y: auto;    /* scroll inside footer if too big */
+        line-height: 1.4;
+        max-height: none;     /* no cut-off */
+        overflow: hidden;     /* prevent overlap */
+        text-align: center;
     }
 
     .language-list,
     .footer-links {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px 10px;
-        font-size: 10px;
+        flex-direction: column;  /* stack vertically */
+        align-items: center;
+        gap: 4px;
+        font-size: 11px;
     }
 
     .language-list a,
     .footer-links a {
-        flex: 1 1 45%;   /* force them into 2 columns */
+        display: block;
+        width: 100%;            /* take full width */
         text-align: center;
     }
 
     .login-box {
-        margin-bottom: 20px; /* small margin before footer */
+        margin-bottom: 20px;    /* keep space before footer */
     }
 
     .facebook-logo {
