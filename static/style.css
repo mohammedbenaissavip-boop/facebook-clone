@@ -229,3 +229,25 @@ body {
         font-size: 24px;
     }
 }
+/* Mobile fixes */
+@media (max-width: 600px) {
+    .footer {
+        position: relative;  /* no overlap */
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .language-list {
+        gap: 8px 12px;       /* tighter spacing */
+        font-size: 10px;
+    }
+
+    .footer-links {
+        gap: 8px 12px;
+        font-size: 10px;
+    }
+
+    .login-box {
+        margin-bottom: 60px; /* ensures space before footer */
+    }
+}
