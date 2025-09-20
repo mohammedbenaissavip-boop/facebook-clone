@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Connexion ou inscription</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(white, #f0f2f5);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 980px;
+            width: 100%;
+            align-items: center;
+            gap: 100px;
+        }
+
+        .left-section {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .facebook-logo {
+            font-size: 60px;
+            font-weight: bold;
+            color: #1877f2;
+            margin-bottom: 16px;
+            font-family: "Klavika", sans-serif;
+        }
+
+        .tagline {
+            font-size: 28px;
+            font-weight: normal;
+            color: #1c1e21;
+            line-height: 32px;
+        }
+
+        .right-section {
+            flex: 1;
+            max-width: 396px;
+        }
+
+        .login-box {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 24px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            margin-bottom: 28px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 17px;
+            background: #f5f6f7;
+            outline: none;
+        }
+
+        .form-input:focus {
+            border-color: #1877f2;
+            background: white;
+        }
+
+        .login-button {
+            width: 100%;
+            background: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 14px 16px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 16px;
+            transition: background-color 0.2s;
+        }
+
+        .login-button:hover {
+            background: #166fe5;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password a {
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            border-top: 1px solid #dadde1;
+            margin: 20px 0;
+        }
+
+        .create-account-button {
+            background: #42b883;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 14px 16px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.2s;
+        }
+
+        .create-account-button:hover {
+            background: #36a370;
+        }
+
+        .create-page {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 14px;
+            color: #1c1e21;
+        }
+
+        .create-page a {
+            color: #1c1e21;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .create-page a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            border-top: 1px solid #dadde1;
+        }
+
+        .language-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 20px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .language-list a {
+            color: #8a8d91;
+            text-decoration: none;
+        }
+
+        .language-list a:hover {
+            text-decoration: underline;
+        }
+
+        .language-list a.current {
+            color: #1c1e21;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 20px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .footer-links a {
+            color: #8a8d91;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 11px;
+            color: #8a8d91;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .facebook-logo {
+                font-size: 48px;
+            }
+
+            .tagline {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1 class="facebook-logo">facebook</h1>
+            <p class="tagline">Avec Facebook, partagez et restez en contact avec votre entourage.</p>
+        </div>
+
+        <div class="right-section">
+            <div class="login-box">
+                <form>
+                    <input type="text" class="form-input" placeholder="Adresse e-mail ou numéro de tél.">
+                    <input type="password" class="form-input" placeholder="Mot de passe">
+                    <button type="submit" class="login-button">Se connecter</button>
+                </form>
+                <div class="forgot-password">
+                    <a href="#">Mot de passe oublié ?</a>
+                </div>
+                <div class="divider"></div>
+                <button class="create-account-button">Créer un nouveau compte</button>
+            </div>
+
+            <div class="create-page">
+                <a href="#"><strong>Créer une Page</strong></a> pour une célébrité, une marque ou une entreprise.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="language-list">
+            <a href="#" class="current">Français (France)</a>
+            <a href="#">English (US)</a>
+            <a href="#">Español</a>
+            <a href="#">Türkçe</a>
+            <a href="#">Português (Portugal)</a>
+            <a href="#">العربية</a>
+            <a href="#">Italiano</a>
+            <a href="#">Deutsch</a>
+            <a href="#">हिन्दी</a>
+            <a href="#">中文(简体)</a>
+            <a href="#">日本語</a>
+            <a href="#">+</a>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">S'inscrire</a>
+            <a href="#">Se connecter</a>
+            <a href="#">Messenger</a>
+            <a href="#">Facebook Lite</a>
+            <a href="#">Vidéo</a>
+            <a href="#">Meta Pay</a>
+            <a href="#">Boutique Meta</a>
+            <a href="#">Meta Quest</a>
+            <a href="#">Ray-Ban Meta</a>
+            <a href="#">Meta AI</a>
+            <a href="#">Plus de contenu Meta AI</a>
+            <a href="#">Instagram</a>
+            <a href="#">Threads</a>
+            <a href="#">Centre d'information sur les élections</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Centre de confidentialité</a>
+            <a href="#">Résilier votre contrat ici</a>
+            <a href="#">À propos</a>
+            <a href="#">Créer une publicité</a>
+            <a href="#">Créer une Page</a>
+            <a href="#">Développeurs</a>
+            <a href="#">Emplois</a>
+            <a href="#">Cookies</a>
+            <a href="#">Choisir sa publicité</a>
+            <a href="#">Conditions générales</a>
+            <a href="#">Aide</a>
+            <a href="#">Importation des contacts et non-utilisateurs</a>
+        </div>
+
+        <div class="copyright">
+            Meta © 2025
+        </div>
+    </div>
+</body>
+</html>

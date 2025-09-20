@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container" style="flex-direction: column; text-align:center;">
+    <h1>Bienvenue {{ user }} 🎉</h1>
+    <p>Ceci est votre espace personnel.</p>
+    <a href="/logout" class="logout-button">Se déconnecter</a>
+  </div>
+</body>
+</html>
