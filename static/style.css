@@ -229,25 +229,24 @@ body {
         font-size: 24px;
     }
 }
-/* Mobile fixes */
+/* --- MOBILE FOOTER FIX --- */
 @media (max-width: 600px) {
     .footer {
-        position: relative;  /* no overlap */
-        padding: 10px;
+        position: relative;   /* no overlap */
+        padding: 8px;
         font-size: 10px;
+        line-height: 1.2;
     }
 
-    .language-list {
-        gap: 8px 12px;       /* tighter spacing */
-        font-size: 10px;
-    }
-
+    .language-list,
     .footer-links {
-        gap: 8px 12px;
-        font-size: 10px;
+        display: grid;        /* stack instead of long row */
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+        gap: 6px;
+        text-align: center;
     }
 
     .login-box {
-        margin-bottom: 60px; /* ensures space before footer */
+        margin-bottom: 100px; /* ensures space above footer */
     }
 }
