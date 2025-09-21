@@ -229,45 +229,50 @@ body {
         font-size: 24px;
     }
 }
-/* --- MOBILE FOOTER FIX (better) --- */
-/* --- MOBILE FOOTER FIX (final) --- */
+/* === Mobile adjustments === */
 @media (max-width: 600px) {
-    .footer {
-        position: relative;   /* footer scrolls normally */
-        padding: 6px;
-        font-size: 10px;
-        line-height: 1.4;
-        max-height: none;     /* no cut-off */
-        overflow: hidden;     /* prevent overlap */
-        text-align: center;
-    }
+  body {
+    padding: 10px;
+    align-items: flex-start;   /* let it scroll */
+  }
 
-    .language-list,
-    .footer-links {
-        display: flex;
-        flex-direction: column;  /* stack vertically */
-        align-items: center;
-        gap: 4px;
-        font-size: 11px;
-    }
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
 
-    .language-list a,
-    .footer-links a {
-        display: block;
-        width: 100%;            /* take full width */
-        text-align: center;
-    }
+  .facebook-logo {
+    font-size: 42px;
+  }
 
-    .login-box {
-        margin-bottom: 20px;    /* keep space before footer */
-    }
+  .tagline {
+    font-size: 18px;
+    line-height: 22px;
+  }
 
-    .facebook-logo {
-        font-size: 40px;
-    }
+  .login-box {
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+  }
 
-    .tagline {
-        font-size: 18px;
-        line-height: 22px;
-    }
+  .form-input {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .login-button,
+  .create-account-button,
+  .logout-button {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  /* Hide footer & language links on phones */
+  .footer,
+  .language-list,
+  .footer-links {
+    display: none !important;
+  }
 }
